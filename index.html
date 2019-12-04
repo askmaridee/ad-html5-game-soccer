@@ -1,0 +1,886 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+    <div id="hc_richmedia">
+        <script type="text/javascript">
+if(!window.jQuery || !window.$) {
+            document.write('\x3Cscript src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript">\x3C/script>');
+        }
+        </script> 
+        <!-- <script type="text/javascript" src="mraid.js"></script>  -->
+        <style type="text/css">
+body {margin: 0px;}
+        #hc_richmedia {
+        position:relative;
+        width:320px;
+        margin:0 auto;
+        /*border:solid 1px red;*/
+        }
+        #hc_richmedia .hc_initial_view {
+        position:relative;
+        z-index:1;
+        }
+        #hc_richmedia .hc_content {
+        position:relative;
+        width:320px;
+        height:480px;
+        text-align:center;
+        z-index:1;
+        }
+        #hc_richmedia .hc_closebtn {
+        position:absolute;
+        top:0;
+        right:0;
+        z-index:2;
+        cursor:pointer;
+        }
+        #hc_richmedia .hc_closebtn img {
+        position:relative;
+        z-index:20;
+        }
+        #hc_richmedia .hc_content h3 {
+        margin-top:0;
+        }
+        #hc_richmedia .hc_blockimg {
+        display:block;
+        }
+        a img {border: none;}
+        /* custom styles */
+        #hc_noclick1 {
+        position:relative;
+        width:320px;
+        height:461px;
+        }
+        /** GLOBAL **/
+        @charset "UTF-8";
+        /* Reset Styles***********************/
+        html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+        body {line-height: 1;}
+        ol, ul {list-style: none;}
+        blockquote, q {quotes: none;}
+        blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+        table {border-collapse: collapse; border-spacing: 0;}
+        strong {font-weight: bold;}
+        em {font-style: italic;}
+            
+        /* apply a natural box layout model to all elements */
+        *, *:before, *:after {
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+        }
+
+        @font-face {
+        font-family: 'bebas_neueregular';
+        src: url('fonts/budsoccer/35081.eot');
+        src: url('fonts/budsoccer/35081.eot?#iefix') format('embedded-opentype'),
+         url('fonts/budsoccer/35084.woff') format('woff'),
+         url('fonts/budsoccer/35083.ttf') format('truetype'),
+         url('images/budsoccer/35082.svg#bebas_neueregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+
+        }
+
+        body {
+        font-family: bebas_neueregular, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .modal {
+        width: 90%;
+        border: 2px solid white;
+        -moz-border-radius: 15px;
+        border-radius: 15px;    
+        background: #7c7c7c; /* Old browsers */ 
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */ 
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdjN2M3YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0OTQ5NDkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);    
+        background: -moz-linear-gradient(top,  #7c7c7c 0%, #494949 100%); /* FF3.6+ */  
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7c7c7c), color-stop(100%,#494949)); /* Chrome,Safari4+ */    
+        background: -webkit-linear-gradient(top,  #7c7c7c 0%,#494949 100%); /* Chrome10+,Safari5.1+ */  
+        background: -o-linear-gradient(top,  #7c7c7c 0%,#494949 100%); /* Opera 11.10+ */   
+        background: -ms-linear-gradient(top,  #7c7c7c 0%,#494949 100%); /* IE10+ */ 
+        background: linear-gradient(to bottom,  #7c7c7c 0%,#494949 100%); /* W3C */ 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c7c7c', endColorstr='#494949',GradientType=0 ); /* IE6-8 */
+        color: white;
+        text-transform: capitalize;
+        margin: 0 auto;
+        padding: 1em;
+        text-align: center;
+        position: relative;
+
+        }
+
+        h1 { font-size: 2.2em; padding-bottom: .5em; }
+        h2 { font-size: 1.7em; }
+        .date { margin: .5em 0; }
+        .form select, .form .submit input {
+        background: #b9162e; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I5MTYyZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4ZDBhMWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #b9162e 0%, #8d0a1e 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b9162e), color-stop(100%,#8d0a1e)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #b9162e 0%,#8d0a1e 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #b9162e 0%,#8d0a1e 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #b9162e 0%,#8d0a1e 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #b9162e 0%,#8d0a1e 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9162e', endColorstr='#8d0a1e',GradientType=0 ); /* IE6-8 */
+        position: relative;
+        }
+        .form select {
+        width: 30%;
+        padding: .5em;
+        margin: 0 .2em;
+        border: 0;
+        border-radius: 0;
+        line-height: 1;
+        -webkit-appearance: none;
+        font-size: .7em;
+        color: white;
+        text-transform: uppercase;  
+        }
+        .form .submit input {
+        width: 60%;
+        padding: .5em;
+        margin: 0 .2em;
+        border: 0;
+        border-radius: .3em;
+        line-height: 1;
+        -webkit-appearance: none;
+        font-size: 1.2em;
+        color: white;
+        -moz-border-radius: .5em;
+        }
+        @media screen and (max-width: 321px) { /* cell portrait  */
+        .form select {
+        line-height: 1.5em;
+        font-size: .7em;
+        }
+        h1 { font-size: 1.5em; padding-bottom: .5em; }
+        h2 { font-size: 1em; }
+        }
+
+        /** GAME **/
+        #game_area { display: block; 
+        background-image: url('images/budsoccer/35207.jpg');
+        background-position: center top;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        padding-top: 6%;
+        height: 30em;
+        position: fixed;
+        top: 0;
+        }
+        #top_bar {
+        display: table;
+        width: 90%;
+        background: transparent url('images/budsoccer/35229.png') no-repeat top center;
+        background-size: 100%;
+        margin: 0 auto;
+        }
+        .table_row { display: table-row; }  
+        #nav_home, #nav_replay {
+        display: table-cell;
+        text-indent: -999px;
+        padding-top: 1.15em;
+        width: 17%;
+        vertical-align: top;
+        padding-top: 1em;
+        }
+
+        #nav_home a, #nav_replay a {
+        display: block;
+        width: 100%;
+        height: 3em;
+        }
+        .scoreboard {
+        color: white;
+        display: table-cell;
+        width: 58%;
+        height: 5.5em;
+        }
+        .scoreboard div {
+        text-align: center;
+        float: left;
+        width: 33%;
+        font-size: 2em;
+        padding-top: 1.2em;
+        color: #9b0606;
+        }
+
+        .goal-border {
+        width: 41%;
+        margin: 0 auto;
+        padding-top: 12%;
+        position: relative;
+        }
+
+        .goal {
+        position: absolute;
+        height: 10%;
+        width: 80%;
+        top: 49%;
+        left: 50%;
+        margin-left: -40%;
+        }
+
+        .swipe-area {
+        position: absolute;
+        bottom: 0;
+        height: 50%;
+        width: 100%;
+        left: 0;
+        z-index: 2;
+        }
+
+        .ball {
+        width: 14%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        }
+        .ballShadow {
+        width: 14%;
+        margin: 0 auto;
+        position: relative;
+        background: transparent url('images/budsoccer/35163.png') no-repeat bottom center;
+        z-index: 0;
+        top: -1.5em;
+        background-size: 100%;
+        height: 2em;
+        }
+
+        .ball-area {
+        position: relative;
+        bottom: -4em;
+        }
+
+        /** INSTRUCTIONS **/
+
+        #arrow { 
+        width: 60%; 
+        margin: 0 auto;
+        }
+        .instructiball  { 
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+        top: -3em;
+
+        }
+        #vamos {
+        width: 35%;
+        float: right;   
+        margin-top: -5em;
+        }
+        h1 { font-size: 2em; }
+        h2 { font-size: 2em; margin-top: .5em; }
+
+
+        /** SWEEPS FORM **/
+
+        #sweepsEntry { diplay: none !important; }
+        #sweepsEntry .form-field {
+        margin-bottom: .3em;
+        }
+        .form input {
+        padding: .5em;
+        margin: 0 .2em;
+        border: 0;
+        text-transform: uppercase;
+        }
+        .form .submit input {
+        background: #b9162e; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I5MTYyZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4ZDBhMWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #b9162e 0%, #8d0a1e 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b9162e), color-stop(100%,#8d0a1e)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #b9162e 0%,#8d0a1e 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #b9162e 0%,#8d0a1e 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #b9162e 0%,#8d0a1e 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #b9162e 0%,#8d0a1e 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9162e', endColorstr='#8d0a1e',GradientType=0 ); /* IE6-8 */
+        position: relative;
+        width: 60%;
+        padding: .5em;
+        margin: 0 .2em;
+        border: 0;
+        border-radius: .3em;
+        line-height: 1;
+        -webkit-appearance: none;
+        font-size: 1.2em;
+        color: white;
+        -moz-border-radius: .5em;
+        text-transform: uppercase;
+        }
+        @media (max-width: 450px) {
+        .ball-area {
+        position: relative;
+        bottom: -10em;
+        }
+
+        .goal-border {
+        padding-top: 3%;
+        }
+        #vamos {  
+        margin-top: -4em;
+        }
+        h1 { font-size: 1.5em; }
+        h2 { font-size: 1.2em; margin-top: .5em; }
+
+        .scoreboard div {
+        font-size: 1.5em;
+        padding-top: 1em;
+
+        }
+        .form .submit input {
+        font-size: 1em;
+        }
+        }
+
+
+        /*** MODAL BEGIN ***/
+
+        .win-modal, 
+        .intro-modal {
+        display: block;
+        background-color: white;
+        width: 75%;
+        min-height: 50px;
+        text-align: center;
+        position: absolute;
+        z-index: 15;
+        top: 10px;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        padding: 1em;
+        }
+        .intro-modal {
+        display: block;
+        }
+        .win-modal {
+        display: none;
+		top: 100px;
+        }
+
+        #dimmer{
+        background: rgba(64, 64, 64, 0.6);
+        min-width: 100%;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        }
+
+        .modal-button {
+        display:block;
+        margin:auto;
+        width:50%;
+        text-align:center;
+        background-color:#c0c0c0;
+        margin-top:1em;
+        border:solid 1px #808080;
+        padding:4px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        -o-border-radius:4px;
+        -ms-border-radius:4px;
+        border-radius:4px;
+        }
+
+        .modal-button a {
+        color: #333;
+        text-decoration: none;
+        }
+
+        .play_again {
+        background: #d4d8dd; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q0ZDhkZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3Nzc3NzciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #d4d8dd 0%, #777777 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4d8dd), color-stop(100%,#777777)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #d4d8dd 0%,#777777 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #d4d8dd 0%,#777777 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #d4d8dd 0%,#777777 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #d4d8dd 0%,#777777 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4d8dd', endColorstr='#777777',GradientType=0 ); /* IE6-8 */
+        font-size: 1.5em;
+        padding: .4em;
+        text-align: center;
+        width: 80%;
+        border: 1px solid black;
+        -moz-border-radius: 5px;
+        border-radius: 5px; 
+		margin: 1em auto;
+        }
+        .play_again a {
+        text-decoration: none;
+        color: #cf282b;
+        }
+        @media screen and (max-width: 321px) { /* cell portrait  */
+
+        #gracias .intro-modal p {
+        font-size: 1.2em;
+        }
+        #gracias .legal {
+        margin-top: 1em;
+        }
+        #gracias .fb_share {
+        margin-top: .3em;
+        }
+        }
+
+        </style>
+
+        <div class="hc_initial_view">
+            <a href="#" id="hc_expand" onclick="jQuery.hc_rm.expand(event); return false;"><img class="hc_banner hc_blockimg" src="images/budsoccer/46285.gif" style="width:320px;height:50px;"></a>
+        </div><!-- end initial view content -->
+
+        <div class="hc_content" id="hc_content" style="display:none;">
+            <div class="hc_closebtn" id="hc_closebtn" onclick="jQuery.hc_rm.collapse(event); return false;" style="display:none;"><img src="images/budsoccer/33256.png"></div>
+
+            <div id="game_area">
+                <div class="engaged dimmer container" id="dimmer" style="">
+                </div>
+
+                <div id="top_bar">
+                    <div class="table_row">
+                        <div id="nav_home">
+                            <a href="/xexit/?url=http://m.budweiser.com/es/bw-mobile-us/agegate;jsessionid=S57lRT5VX6rJzjQmVyCRxADU"
+                            title="Home">Home</a>
+                        </div>
+
+                        <div class="scoreboard">
+                            <div class="user-score"></div>
+
+                            <div class="shot-clock"></div>
+
+                            <div class="high-score"></div>
+                        </div>
+
+                        <div id="nav_replay">
+                            <a href="/game" title="Replay">Replay</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swipe-area"></div>
+
+                <div class="goal-border">
+                    <img src="images/budsoccer/35203.png" style="width: 100%;">
+
+                    <div class="goal"></div>
+                </div>
+
+                <div class="ball-area">
+                    <div class="ball"><img src="images/budsoccer/35214.png" width="100%"></div>
+
+                    <div class="ballShadow"></div>
+                </div>
+
+                <div class="intro-modal modal container" id="instructions"
+                style="">
+                    <div class="markup" style="">
+                        <h1>C&oacute;mo Jugar</h1>
+
+                        <h2>Deslice el dedo hacia arriba para disparar LA
+                        pelota!</h2>
+                    </div>
+
+                    <div class="image" id="arrow" style=""><img alt="ChalkArrow" border="0" src="images/budsoccer/35317.png"
+                    style="margin:0 auto;width:100%;" title="ChalkArrow"></div>
+
+                    <div class="instructiball image" style=""><img alt="GameBall" border="0" src="images/budsoccer/35214.png"
+                    style="margin:0 auto;width:100%;" title="GameBall"></div>
+
+                    <div class="play image" id="vamos" style="">
+                        <a href="javascript:void(0);"><img alt="Vamos" border="0" src="images/budsoccer/35319.png"
+                        style="margin:0 auto;width:100%;" title="Vamos"></a>
+                    </div>
+                </div>
+
+                <div class="win-modal modal container" id="sweepsEntry" style="">
+                    <div class="markup" style="">
+                        <h1>&iexcl;Metiste <span class="goals">(X)</span> goles!</h1>
+
+                       <div class="play_again hyperlink" style="">
+                            <a href="javascript:void(0);" style="display:block;">jugar otra vez</a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div><!-- end game area -->
+
+        </div><!-- end reveal content -->
+        <script type="text/javascript">
+
+        /* DO NOT USE slashes for comments. */
+        /* use .toggle to reveal from left to right, down */
+        /* use .slideToggle to reveal from top to bottom */
+        /* any closing html tags must have the forward slash escaped,e.g. <\/div> */
+
+        (function ($) {     
+            
+            var fifheight;
+                    
+            $.hc_rm ={
+                getQP: function (p) {
+                    if(window.location && typeof window.location.search ==="string") {
+                        var qArray =window.location.search.substr(1).split("&"),qParam,i;
+                        for(i=0; i<qArray.length; i++) {
+                            qParam =qArray[i].split("=");
+                            if(qParam.length ===2 && qParam[0] ===p) {
+                                return unescape(qParam[1]);
+                            }
+                        }
+                    }
+                    return false;
+                },
+                getSQP: function(p) {
+                    var scriptSrc =$("script[src*='as.aug.me']").attr('src');
+                    var tmp =scriptSrc.split("?");
+                    if(tmp.length > 1) {
+                        var qArray =tmp[1].split("&"),qParam,i;
+                        for(i=0; i<qArray.length; i++) {
+                            qParam =qArray[i].split("=");
+                            if(qParam.length ===2 && qParam[0] ===p) {
+                                return unescape(qParam[1]);
+                            }
+                        }
+                    }
+                    return false;
+                },
+                expand: function (e) {              
+                    if (!e) { e =window.event; }
+                    e.cancelBubble =true;
+                    if (e.stopPropagation) e.stopPropagation(); 
+                    /* FIF support */
+                    if(window.inDapIF ===true) {
+                        $("iframe",parent.document).each(function(iel, el){
+                            if(el.contentWindow ===window) {
+                                fifheight =$(el).css("height");
+                                $(el).css("height","511px");
+                                return false;
+                            }
+                        });
+                    }                              
+                    /* animations for expand */
+                    $("#hc_richmedia .hc_content").show();
+                    $("#hc_richmedia .hc_closebtn").show();
+                    $("#hc_richmedia .hc_initial_view").hide();
+                                  
+                    return false;
+                },
+                collapse: function(e) {
+                    if (!e) { e =window.event; }
+                    e.cancelBubble =true;
+                    if (e.stopPropagation) e.stopPropagation(); 
+                    /* FIF support */
+                    if(window.inDapIF ===true) {
+                        $("iframe",parent.document).each(function(iel, el){
+                            if(el.contentWindow ===window) {
+                                $(el).css("height",fifheight);
+                                return false;
+                            }
+                        });
+                    }               
+                    /* mraid function call */
+                    if(typeof mraid !=="undefined") {
+                        mraid.close();
+                    }                   
+                    /* animations for collapse */
+                    $("#hc_richmedia .hc_content").hide();
+                    $("#hc_richmedia .hc_closebtn").hide();
+                    /*$("#hc_richmedia").append('<img src="#trk:collapse#?cb='+new Date().getTime()+'" style="position:absolute;height:1px;width:1px;" />'); */                     
+                    $("#hc_richmedia .hc_initial_view").show();
+                    return false;                                                   
+                },
+                engage: function(e) {
+                    if (!e) { e =window.event; }
+                    e.cancelBubble =true;
+                    if (e.stopPropagation) e.stopPropagation();
+                    /*$("#hc_richmedia").append('<img src="#trk:engage#?cb='+new Date().getTime()+'" style="position:absolute;height:1px;width:1px;" />');*/
+                    return false;
+                }
+                
+            };
+                    
+        }(jQuery));
+
+        /* GAME LOGIC */
+
+        (function ($) {
+        "use strict";
+
+        $.fn.sportShooter =function (params) {
+
+        var config =$.extend({}, $.fn.sportShooter.defaults, params);
+
+        return $(this).each(function () {
+
+            var game_area =$(this),
+                ball_element =game_area.find(".ball"),
+                ballshadow_element =game_area.find(".ballShadow"),
+                goal_element =game_area.find(".goal"),
+                goal_border_element =game_area.find(".goal-border"),
+                shot_clock =config.shot_clock,
+                user_score =0,
+                goal_streak =0,
+                start_swipe,
+                end_swipe,
+                shot_in_progress;
+            
+            /* utility function: pad scores to fit a certain number of digits. */
+            function pad_zeroes(number, pad_length) {
+
+                var padded_number =number.toString();
+
+                if (!pad_length) {
+                    pad_length =2;
+                }
+
+                while (padded_number.length < pad_length) {
+                    padded_number ="0" + padded_number;
+                }
+
+                return padded_number;
+            }
+
+            /* every second that ticks by, we need to change the shot-clock display. */
+            function shot_clock_tick() {
+                if (shot_clock < 0) {
+                    /* game over; time is up. */
+                    return config.time_up(user_score, config);
+                }
+
+                /* get mm:ss readout for the clock. */
+                var minute =Math.floor(shot_clock / 60),
+                    second =pad_zeroes(shot_clock % 60, 2);
+
+                game_area.find("div.shot-clock").html(minute + ":" + second);
+
+                /* tick-down happens after the render. */
+                shot_clock -=1;
+
+                window.setTimeout(shot_clock_tick, 1000);
+            }
+
+            /* redraw the user's score when it increases */
+            function display_user_score() {
+                game_area.find("div.user-score").html(pad_zeroes(user_score));
+            }
+
+            /* place the ball back on the bottom rack for another shot. */
+            function shot_reset() {
+                ball_element.attr("style", "");
+                config.after_shot(game_area);
+                shot_in_progress =false;
+                ballshadow_element.css('display', 'block');
+            }
+
+            /* figure out where the ball is going to end up. */
+            function calculate_shot() {
+                if (shot_in_progress || start_swipe.top - end_swipe.top < 20) {
+                    return;
+                }
+                ballshadow_element.css('display', 'none');
+
+                var shot_spot ={},
+                    ball_width =ball_element.width(),
+                    m;
+
+                shot_in_progress =true;
+
+                shot_spot.top =goal_element.offset().top - ball_element.offset().top - ball_element.height();
+
+                if (end_swipe.left ===start_swipe.left) {
+
+                    /* no slope; dx =0. */
+                    shot_spot.left =0;
+                } else {
+
+                    /* calculate slope. */
+                    m =(end_swipe.top - start_swipe.top) / (end_swipe.left - start_swipe.left);
+
+                    /* slope =dy / dx  =>  dx =dy / slope */
+                    shot_spot.left =shot_spot.top / m;
+                }
+                
+                config.before_shot(game_area);
+
+                ball_element.animate({
+                    "left": shot_spot.left + "px",
+                    "top": shot_spot.top + "px",
+                    "width": (ball_width / 2) + "px"
+                }, 500, function () {
+                    var ball_center =ball_element.offset().left + (ball_element.width() / 2),
+                        goal_left_rim =goal_element.offset().left,
+                        goal_right_rim =goal_left_rim + goal_element.width(),
+                        goal_border_left_rim =goal_border_element.offset().left,
+                        goal_border_right_rim =goal_border_left_rim + goal_border_element.width();
+
+
+                    if (ball_center >=goal_left_rim && ball_center <=goal_right_rim) {
+                        /* made the goal */
+                        goal_streak +=1;
+                        user_score +=config.goal_value;
+
+                        config.made_goal(game_area, goal_streak, config);
+
+                        ball_element.animate({
+                            top: "+=" + ball_element.height() + "px",
+                            left: "0",
+                            "width": (ball_width / 4) + "px",
+                            opacity: 0
+                        }, 300, shot_reset);
+
+                        display_user_score();
+
+                    } else {
+                        /* missed the goal */
+                        goal_streak =0;
+
+                        if (ball_center >=goal_border_left_rim && ball_center <=goal_border_right_rim) {
+                            /* bounce off goal border */
+                            ball_element.animate({
+                                "top": "-=" + (shot_spot.top / 2) + "px",
+                                "left": "+=" + (shot_spot.left * 3 / 2) + "px",
+                                "width": (ball_width * 3 / 5) + "px",
+                                opacity: 0
+                            }, 300, shot_reset);
+                        } else {
+                            /* missed the goal border */
+                            ball_element.animate({
+                                "top": "+=48px",
+                                "width": (ball_width / 4) + "px",
+                                opacity: 0
+                            }, 300, shot_reset);
+                        }
+                    }
+                });
+            }
+
+            /* start the clock and bind the events. */
+            function start_game() {
+                console.log(shot_clock);
+                shot_clock =15;
+                /* swipe up with a touch-screen or a mouse to shoot the ball. */
+console.log('touch ready');
+                    game_area.find(".swipe-area")
+                        .bind("touchstart", function (e) {
+                            e.preventDefault();
+console.log('touchstart');
+                            start_swipe ={
+                                top: e.originalEvent.targetTouches[0].pageY,
+                                left: e.originalEvent.targetTouches[0].pageX
+                            };
+                        })
+                        .bind("touchmove", function (e) {
+                            e.preventDefault();
+console.log('touchmove');
+                        })
+                        .bind("touchend", function (e) {
+                            e.preventDefault();
+console.log('touchend');
+
+                            end_swipe ={
+                                top: e.originalEvent.changedTouches[0].pageY,
+                                left: e.originalEvent.changedTouches[0].pageX
+                            };
+
+
+                            calculate_shot();
+                        });
+
+
+                /*initialize the user score */
+                display_user_score();
+
+                /* set the high score */
+                game_area.find("div.high-score").html(config.high_score);
+
+                /* set the timer */
+                shot_clock_tick();
+
+            }
+
+            /* game intro */
+            config.game_intro(start_game);
+        });
+        };
+
+        $.fn.sportShooter.defaults ={
+        high_score: 0,
+        shot_clock: 60,
+        goal_value: 2,
+        before_shot: function (game_area) {},
+        after_shot: function (game_area) {},
+        made_goal: function (game_area, goal_streak, config) {},
+        missed_goal: function (game_area, config) {},
+        game_intro: function (start_game) {
+            /* perform any animation you want in this area. */
+            
+            /* you must include this call to start the game. */
+            start_game();
+        },
+        time_up: function (user_score, config) {
+            window.document.cookie ="user_score=" + user_score;
+
+            if (user_score > config.high_score) {
+                window.document.cookie ="high_score=" + user_score;
+            } else if (!window.document.cookie.match("high_score=")) {
+                window.document.cookie ="high_score=" + config.high_score;
+            }
+
+            $("#dimmer").show();
+           $(".win-modal").show().find(".goals").text(user_score);
+                /*$("#hc_richmedia").append('<img src="#trk:rm_metiste#?cb='+new Date().getTime()+'" style="position:absolute;height:1px;width:1px;" />');  */                      
+
+
+        }
+        };
+        }(jQuery));
+
+        $("#game_area").sportShooter({
+        shot_clock: 15,
+        goal_value: 1,
+        high_score: parseInt('#request::high_score#', 10) || 0,
+        game_intro: function (start_game) {
+        $("#dimmer").show();
+        $(".intro-modal").show();
+
+        $(".play a").bind("click", function (e) {
+        e.preventDefault();
+        $('#game_area').show();
+        $("#dimmer").hide();
+        $(".intro-modal").hide();
+
+        start_game();
+        });
+        $('.play_again a').click(function(e) {
+        console.log("play again");
+        e.preventDefault();
+        $("#sweepsEntry").hide();
+        $("#gracias").hide();
+        $('#game_area').show();
+        $("#dimmer").hide();
+          start_game();
+        });
+
+        }
+        });
+
+
+        $("body").ontouchmove =function(e){ e.preventDefault(); console.log('ontouchmove'); };       
+
+
+        </script> 
+    </div><!-- end required wrapper -->
